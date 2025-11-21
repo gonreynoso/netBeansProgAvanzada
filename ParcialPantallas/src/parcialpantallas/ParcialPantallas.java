@@ -19,7 +19,7 @@ public class ParcialPantallas {
     
     
     public static void main() {
-    
+    //metodo main
     }
     
 }
