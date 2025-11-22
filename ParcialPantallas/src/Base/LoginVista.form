@@ -50,22 +50,15 @@
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Component id="jLabelUser" min="-2" max="-2" attributes="0"/>
                               <Component id="jLabelPass" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabelAdmin" alignment="0" min="-2" max="-2" attributes="0"/>
                           </Group>
-                      </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="240" max="-2" attributes="0"/>
-                          <Component id="jLabelAdmin" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="264" max="-2" attributes="0"/>
-                          <Component id="jLabelRegister" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="270" max="-2" attributes="0"/>
                           <Component id="jButtonSubmit" min="-2" pref="140" max="-2" attributes="0"/>
                       </Group>
                   </Group>
-                  <EmptySpace pref="202" max="32767" attributes="0"/>
+                  <EmptySpace pref="233" max="32767" attributes="0"/>
               </Group>
               <Group type="102" alignment="1" attributes="0">
                   <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
@@ -74,6 +67,7 @@
                           <Group type="103" groupAlignment="1" attributes="0">
                               <Component id="jPasswordField1" min="-2" pref="198" max="-2" attributes="0"/>
                               <Component id="jTextFieldUsuario" min="-2" pref="197" max="-2" attributes="0"/>
+                              <Component id="jLabelRegister" alignment="1" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="267" max="-2" attributes="0"/>
                       </Group>
@@ -163,7 +157,7 @@
             </Property>
             <Property name="text" type="java.lang.String" value="Eres nuevo? Registrate aqui"/>
             <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-              <Color id="Cursor de Mano"/>
+              <Color id="Default Cursor"/>
             </Property>
           </Properties>
         </Component>
@@ -177,9 +171,12 @@
             </Property>
             <Property name="text" type="java.lang.String" value="Eres administrador? Inicie sesion aqui"/>
             <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-              <Color id="Cursor de Mano"/>
+              <Color id="Default Cursor"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jLabelAdminMouseClicked"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="jButtonSubmit">
           <Properties>
@@ -191,6 +188,9 @@
             </Property>
             <Property name="text" type="java.lang.String" value="Iniciar Sesion"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonSubmitActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JPasswordField" name="jPasswordField1">
           <Properties>

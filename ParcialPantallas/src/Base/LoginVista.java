@@ -75,16 +75,26 @@ public class LoginVista extends javax.swing.JFrame {
         jLabelRegister.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabelRegister.setForeground(new java.awt.Color(255, 255, 255));
         jLabelRegister.setText("Eres nuevo? Registrate aqui");
-        jLabelRegister.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabelRegister.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
         jLabelAdmin.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabelAdmin.setForeground(new java.awt.Color(255, 255, 255));
         jLabelAdmin.setText("Eres administrador? Inicie sesion aqui");
-        jLabelAdmin.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabelAdmin.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        jLabelAdmin.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabelAdminMouseClicked(evt);
+            }
+        });
 
         jButtonSubmit.setBackground(new java.awt.Color(0, 204, 51));
         jButtonSubmit.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jButtonSubmit.setText("Iniciar Sesion");
+        jButtonSubmit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonSubmitActionPerformed(evt);
+            }
+        });
 
         jPasswordField1.setText("jPasswordField1");
         jPasswordField1.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -103,24 +113,20 @@ public class LoginVista extends javax.swing.JFrame {
                         .addGap(209, 209, 209)
                         .addGroup(panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabelUser)
-                            .addComponent(jLabelPass)))
-                    .addGroup(panelLayout.createSequentialGroup()
-                        .addGap(240, 240, 240)
-                        .addComponent(jLabelAdmin))
-                    .addGroup(panelLayout.createSequentialGroup()
-                        .addGap(264, 264, 264)
-                        .addComponent(jLabelRegister))
+                            .addComponent(jLabelPass)
+                            .addComponent(jLabelAdmin)))
                     .addGroup(panelLayout.createSequentialGroup()
                         .addGap(270, 270, 270)
                         .addComponent(jButtonSubmit, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(202, Short.MAX_VALUE))
+                .addContainerGap(233, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelLayout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addGroup(panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelLayout.createSequentialGroup()
                         .addGroup(panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextFieldUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jTextFieldUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabelRegister))
                         .addGap(267, 267, 267))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelLayout.createSequentialGroup()
                         .addComponent(jLabelNombreSupermercado, javax.swing.GroupLayout.PREFERRED_SIZE, 375, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -191,6 +197,15 @@ public class LoginVista extends javax.swing.JFrame {
             jPasswordField1.setForeground(new java.awt.Color(0, 0, 0));
         }
     }//GEN-LAST:event_jPasswordField1MouseClicked
+
+    private void jButtonSubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSubmitActionPerformed
+              // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonSubmitActionPerformed
+
+    private void jLabelAdminMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelAdminMouseClicked
+         RegistroAdmin ra = new RegistroAdmin();
+        ra.setVisible(true); // TODO add your handling code here:
+    }//GEN-LAST:event_jLabelAdminMouseClicked
 
     /**
      * @param args the command line arguments
